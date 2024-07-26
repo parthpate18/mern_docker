@@ -1,13 +1,13 @@
 # Dockerfile.backend
-FROM ubuntu:latest
+FROM node:latest
 
 # Set the working directory
 WORKDIR /wanderlust/backend
 
 # Install Node.js and npm
-RUN apt-get update 
-RUN apt-get install -y nodejs
-RUN apt-get install -y npm
+# RUN apt-get update 
+# RUN apt-get install -y nodejs
+# RUN apt-get install -y npm
 
 # Copy the package.json and package-lock.json files
 COPY package.json package-lock.json ./
