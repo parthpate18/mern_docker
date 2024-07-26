@@ -95,6 +95,20 @@ _I'd love for you to make the most of this project - it's all about learning, he
    npm run dev
    ```
 
+5. **You can also start it using docker**
+   
+   ```bash
+   docker-compose up -d
+   ```
+
+6. **Check out the website running on below port**
+
+   ```bash
+   http://localhost:5173
+   ```
+
+   > You should see the Wanderlust website up and running on your browser.
+
 ## 🌟 Ready to Contribute?
 
 Kindly go through [CONTRIBUTING.md](https://github.com/krishnaacharyaa/wanderlust/blob/main/.github/CONTRIBUTING.md) to understand everything from setup to contributing guidelines.

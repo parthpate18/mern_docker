@@ -2,7 +2,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const PORT = process.env.PORT;
-const MONGODB_URI = process.env.MONGODB_URI;
-const REDIS_URL = process.env.REDIS_URL;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/wanderlust';
+//const MONGODB_URI = process.env.MONGODB_URI;
+const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379';
 
 export { MONGODB_URI, PORT, REDIS_URL };
