@@ -10,7 +10,7 @@ function HomePage() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000'+ '/api/posts')
+      .get(import.meta.env.VITE_API_PATH + '/api/posts')
       .then((response) => {
         setPosts(response.data);
       })
