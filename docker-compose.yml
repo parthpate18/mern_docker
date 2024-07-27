@@ -47,14 +47,14 @@ services:
       - "5173:5173"
     depends_on:
       - backend
-    environment:
-      - VITE_API_PATH="http://localhost:5000"
+    #environment:
+      #- VITE_API_PATH="http://localhost:5000"
     networks:
       - custom_network
     volumes:
       - ./frontend:/app
-    # env_file:
-    #   - ./frontend/.env
+    env_file:
+      - ./frontend/.env
 
   redis:
     image: redis:latest
