@@ -10,28 +10,30 @@ jobs:
     runs-on: [self-hosted, your-local-runner-tag]  # Adjust 'your-local-runner-tag' as needed
 
     steps:
+      # Step 1: Checkout the code from the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Step 2: Set up Node.js environment (Linux version)
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'  # Set appropriate Node.js version
-  # Set appropriate Node.js version
-  # Set appropriate Node.js version
-  
 
+      # Step 3: Install application dependencies
       - name: Install Dependencies
         run: npm install
 
+      # Step 4: Run tests for the MERN application
       - name: Run Tests
         run: npm test
 
+      # Step 5: Build the MERN stack application
       - name: Build the Application
         run: npm run build
 
+      # Step 6: Deploy the application to a local Linux server using PM2
       - name: Deploy to Local Server
         run: |
-          # Example deployment script
-          pm2 delete all || true
-          pm2 start npm --name "app-name" -- start
+          pm2 delete all || true  # Remove existing running processes if any
+          pm2 start npm --name "app-name" -- start  # Replace 'app-name' with the actual name of your app
